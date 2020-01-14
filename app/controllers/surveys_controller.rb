@@ -13,6 +13,7 @@ class SurveysController < ApplicationController
   def create
     @survey = Survey.new(survey_params)
     if @survey.save
+      flash[:notice] = "Survey successfully added!"
       redirect_to surveys_path
     else
       render :new
@@ -44,9 +45,9 @@ class SurveysController < ApplicationController
     redirect_to surveys_path
   end
 
-    private
-    def survey_params
-      params.require(:survey).permit(:name)
-    end
+  private
+  def survey_params
+    params.require(:survey).permit(:name)
+  end
 
 end

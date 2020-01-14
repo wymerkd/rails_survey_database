@@ -1,5 +1,7 @@
 <h1>Add a new question:</h1>
 
+<%= image_tag "funky_question.jpg" , id: 'funky_q' %>
+
 <%= form_for [@survey, @question] do |f| %>
   <%= f.label :name %>
   <%= f.text_area :name %>

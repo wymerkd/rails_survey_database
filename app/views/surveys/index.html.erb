@@ -1,4 +1,4 @@
-<h1>Surveys</h1>
+<h1 id="header">Surveys</h1>
 
 <% if @surveys.any? %>
   <ul>
@@ -10,5 +10,6 @@
   <p>There are no surveys yet.</p>
 <% end %>
 
+<%= image_tag "funky_pumpkin.png" , id: 'funky' %>
 
 <p><%= link_to "Create new survey", new_survey_path %></p>
